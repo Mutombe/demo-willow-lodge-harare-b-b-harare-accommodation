@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Willow Lodge</title>
+    <script>
+      // SPA shim: stash the deep route so main.jsx can rehydrate it after redirect.
+      (function () {
+        try {
+          var path = window.location.pathname + window.location.search + window.location.hash;
+          sessionStorage.setItem('willow:spa-redirect', path);
+          window.location.replace('/');
+        } catch (e) {
+          window.location.replace('/');
+        }
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
